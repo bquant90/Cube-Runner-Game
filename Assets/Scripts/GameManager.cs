@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-
     bool gameHasEnded = false;
     public float restartDelay = 1f;
     public GameObject completeLevelUI;
@@ -13,7 +12,6 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Game Over");
             Invoke("Restart", restartDelay);
         }
-
     }
 
     public void CompleteLevel() {
@@ -23,8 +21,4 @@ public class GameManager : MonoBehaviour {
     void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-
-
 }
